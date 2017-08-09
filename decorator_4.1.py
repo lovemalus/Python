@@ -1,5 +1,4 @@
-#!/usr/bin/env python 
-#-*- coding: utf-8 -*-
+
 
 import functools
 def log(obj):
@@ -27,19 +26,19 @@ def log(obj):
             print('end call')
             return
         return wrapper
- 
+
 @log
 def fnc():
     print('I\'m fnc for testing log without parameter')
- 
+
 @log('')
 def fnc2():
     print('I\'m fnc2 for testing log with empty parameter')
- 
+
 @log('excute')
 def fnc3():
      print('I\'m fnc3 for testing log with parameter')
- 
+
 fnc()
 print('fnc.__name__ = %s' % fnc.__name__)
 print('----------------------------------')
